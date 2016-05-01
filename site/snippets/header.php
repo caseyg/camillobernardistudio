@@ -9,3 +9,5 @@
 
 </head>
 <body>
+<h1>Camillo Bernardo Studio</h1>
+<?php snippet('nav') ?>
