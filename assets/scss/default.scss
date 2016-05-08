@@ -1,8 +1,19 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
 body {
 	background: #fff;
 	font-family: NovelPro-Light, serif;
 	font-weight: 100;
 	font-style: normal;
+}
+
+#main {
+	@include outer-container;
+}
+
+h1 a img {
+	width: 100%;
 }
 
 figure {
@@ -39,6 +50,10 @@ nav {
 	font-family: "Arial", sans-serif;
 }
 
+.WorksThumb {
+	@include span-columns(4);
+}
+
 nav ul {
 	list-style-type: none;
 	margin: 0;
@@ -73,9 +88,6 @@ article {
 article a:link, article a:visited {
 	text-decoration: underline;
 }
-
-
-
 
 @-webkit-keyframes fadeIn {
     0% {
