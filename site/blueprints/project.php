@@ -3,6 +3,7 @@
 title: Project
 pages: false
 files: true
+    sortable: true
 fields:
   title:
     label: Title
@@ -10,6 +11,6 @@ fields:
   text:
     label: Text
     type:  textarea
-  categories: 
+  categories:
   	label: Categories
   	type: tags
