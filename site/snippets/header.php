@@ -17,8 +17,9 @@
         <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+      <div class="m-scene" id="main">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <h1><img src="/assets/images/logo.svg" alt="Camillo Bernardi Studio" width="384" height="20"></h1>
+    <h1><a href="/" data-target="0"><img src="/assets/images/logo.svg" alt="Camillo Bernardi Studio" width="384" height="20"></a></h1>
 	<?php snippet('nav') ?>
