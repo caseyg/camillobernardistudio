@@ -32,20 +32,54 @@ body {
 #main {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative; }
   #main::after {
     clear: both;
     content: "";
     display: table; }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background: #fff; }
+  header div {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100; }
+    header div::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (min-width: 769px) {
+      header div h1, header div nav {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        header div h1:last-child, header div nav:last-child {
+          margin-right: 0; } }
+
+.sceneElement {
+  margin-top: 130px; }
+  @media screen and (min-width: 769px) {
+    .sceneElement {
+      margin-top: 100px; } }
+
 h1 a img {
-  width: 100%; }
+  width: 95%; }
+  @media screen and (min-width: 769px) {
+    h1 a img {
+      width: 100%; } }
 
 figure {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
+  max-height: 100vh;
   display: block; }
 
 img {
@@ -69,32 +103,41 @@ h1, nav {
 nav {
   font-family: "Arial", sans-serif; }
 
-.WorksThumb {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .WorksThumb:last-child {
-    margin-right: 0; }
-
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  text-align: center; }
+  text-align: center;
+  display: block;
+  display: block; }
+  nav ul::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 nav ul li {
-  display: inline-block;
-  margin: 0 20px; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  nav ul li:last-child {
+    margin-right: 0; }
+
+nav ul li a:link, nav ul li a:visited {
+  display: block; }
+
+nav ul li a span {
+  border-bottom: 1px solid transparent;
+  padding: .25em 1em; }
+
+nav ul li a:hover span, a:active span {
+  border-bottom: 1px solid #000; }
 
 a:link, a:visited {
   color: #000; }
 
 a:link, a:visited {
   text-decoration: none; }
-
-a:hover, a:active {
-  text-decoration: underline; }
 
 article {
   font-size: 36pt;
@@ -104,6 +147,103 @@ article {
 
 article a:link, article a:visited {
   text-decoration: underline; }
+
+.WorksThumb {
+  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border: 1px solid transparent; }
+  @media screen and (max-width: 480px) {
+    .WorksThumb {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .WorksThumb:last-child {
+        margin-right: 0; }
+      .WorksThumb:nth-child(2n) {
+        margin-right: 0; }
+      .WorksThumb:nth-child(2n+1) {
+        clear: left; } }
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    .WorksThumb {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .WorksThumb:last-child {
+        margin-right: 0; }
+      .WorksThumb:nth-child(3n) {
+        margin-right: 0; }
+      .WorksThumb:nth-child(3n+1) {
+        clear: left; } }
+  @media screen and (min-width: 769px) {
+    .WorksThumb {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .WorksThumb:last-child {
+        margin-right: 0; }
+      .WorksThumb:nth-child(4n) {
+        margin-right: 0; }
+      .WorksThumb:nth-child(4n+1) {
+        clear: left; } }
+  .WorksThumb:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%; }
+  .WorksThumb > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+.WorksThumb:hover {
+  background-image: none !important;
+  border: 1px solid #000; }
+
+.WorksThumb:hover span, .WorksThumb:active span {
+  border: none; }
+
+.WorksThumb:hover span {
+  opacity: 1; }
+
+.WorksThumb span {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  position: relative;
+  width: 100%;
+  position: absolute;
+  top: -55%;
+  left: 0;
+  text-align: center;
+  opacity: 0; }
+  .WorksThumb span:last-child {
+    margin-right: 0; }
+  .WorksThumb span:nth-child(2n) {
+    margin-right: 0; }
+  .WorksThumb span:nth-child(2n+1) {
+    clear: left; }
+  .WorksThumb span:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 56.25%; }
+  .WorksThumb span > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
 
 @-webkit-keyframes fadeIn {
   0% {
