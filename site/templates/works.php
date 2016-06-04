@@ -1,9 +1,14 @@
 <?php snippet('header') ?>
-<div class="sceneElement" data-viewport="1">
-<?php foreach($pages->find('/works')->children() as $subpage): ?>
-	<a class="WorksThumb" href="<?php echo $subpage->url() ?>" style="background-image:url('<?php echo $subpage->images()->first()->url() ?>');">
-		<span><?php echo $subpage->title() ?></span>
-	</a>
-<?php endforeach ?>
-
+<header class="scene-nav scene-nav--gray scene-nav--fadegray">
+		<?php snippet('nav') ?>
+</header>
+<div class="drawer drawer--open scene-drawer">
+	<div>
+		<?php foreach($pages->find('/works')->children() as $subpage): ?>
+			<a class="WorksThumb" href="<?php echo $subpage->url() ?>" style="background-image:url('<?php echo $subpage->images()->first()->url() ?>');">
+				<span><?php echo $subpage->title() ?></span>
+			</a>
+		<?php endforeach ?>
+	</div>
+	<input type="button" value="&larr;" class="back" onclick="history.back(-1)" />
 <?php snippet('footer') ?>

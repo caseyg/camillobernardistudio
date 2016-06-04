@@ -25,50 +25,31 @@
 
 // SmoothState
 
-(function ($) {
-
-    'use strict';
-
-    $(document).ready(function () {
-
-        // Init here.
-        var $body = $('body'),
-            $main = $('#main'),
-            $site = $('html, body'),
-            transition = 'fade',
-            smoothState;
-
-        smoothState = $main.smoothState({
-            onBefore: function($anchor, $container) {
-                var current = $('[data-viewport]').first().data('viewport'),
-                    target = $anchor.data('target');
-                current = current ? current : 0;
-                target = target ? target : 0;
-                if (current === target) {
-                    transition = 'fade';
-                } else if (current < target) {
-                    transition = 'moveright';
-                } else {
-                    transition = 'moveleft';
-                }
-            },
-            onStart: {
-                duration: 400,
-                render: function (url, $container) {
-                    $main.attr('data-transition', transition);
-                    $main.addClass('is-exiting');
-                    $site.animate({scrollTop: 0});
-                }
-            },
-            onReady: {
-                duration: 0,
-                render: function ($container, $newContent) {
-                    $container.html($newContent);
-                    $container.removeClass('is-exiting');
-                }
-            },
-        }).data('smoothState');
-
-    });
-
-}(jQuery));
+$(function(){
+  'use strict';
+  var $page = $('#main'),
+      options = {
+        debug: true,
+        prefetch: true,
+        cacheLength: 4,
+        onStart: {
+          duration: 750, // Duration of our animation
+          render: function ($container) {
+            // Add your CSS animation reversing class
+            $container.addClass('is-exiting');
+            // Restart your animation
+            smoothState.restartCSSAnimations();
+          }
+        },
+        onReady: {
+          duration: 0,
+          render: function ($container, $newContent) {
+            // Remove your CSS animation reversing class
+            $container.removeClass('is-exiting');
+            // Inject the new content
+            $container.html($newContent);
+          }
+        }
+      },
+      smoothState = $page.smoothState(options).data('smoothState');
+});
