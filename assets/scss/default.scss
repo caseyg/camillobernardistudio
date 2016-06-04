@@ -31,7 +31,7 @@ body {
 	font-style: normal;
 }
 
-#main, .drawer>div, .drawer>article {
+#skrollr-body, .drawer>div, .drawer>article {
 	@include outer-container;
   @include pad(0 default);
 	position: relative;

@@ -14,8 +14,8 @@
         <link rel="stylesheet" href="/assets/css/default.css">
         <script src="/assets/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body id="skrollr-body">
-      <div class="m-scene" id="main">
+    <body>
+      <div class="m-scene" id="skrollr-body">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
