@@ -27,7 +27,7 @@
 
 $(function(){
   'use strict';
-  var $page = $('#skrollr-body'),
+  var $page = $('#main'),
       options = {
         debug: true,
         prefetch: true,

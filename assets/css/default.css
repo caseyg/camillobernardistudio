@@ -11,13 +11,13 @@ body {
   font-weight: 100;
   font-style: normal; }
 
-#skrollr-body, .drawer > div, .drawer > article {
+#main, .drawer > div, .drawer > article {
   max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 2.35765%;
   position: relative; }
-  #skrollr-body::after, .drawer > div::after, .drawer > article::after {
+  #main::after, .drawer > div::after, .drawer > article::after {
     clear: both;
     content: "";
     display: table; }

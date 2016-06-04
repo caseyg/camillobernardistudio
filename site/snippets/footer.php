@@ -1,6 +1,6 @@
   <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-  <script type="text/javascript">var s = skrollr.init({forceHeight: false});</script>
+  <script type="text/javascript">var s = skrollr.init({forceHeight: false});if (s.isMobile()) {s.destroy();}</script>
 </div><!--/.m-page-->
 </div><!--/#main-->
 
