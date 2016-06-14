@@ -177,8 +177,7 @@ article a:link, article a:visited {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
-  border: 1px solid transparent; }
+  overflow: hidden; }
   @media screen and (max-width: 480px) {
     .WorksThumb {
       float: left;
@@ -228,8 +227,7 @@ article a:link, article a:visited {
     bottom: 0; }
 
 .WorksThumb:hover {
-  background-image: none !important;
-  border: 1px solid #000; }
+  background-image: none !important; }
 
 .WorksThumb:hover span, .WorksThumb:active span {
   border: none; }

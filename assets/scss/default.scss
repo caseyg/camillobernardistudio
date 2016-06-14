@@ -213,12 +213,10 @@ article a:link, article a:visited {
 	background-position: center;
 	background-repeat: no-repeat;
 	overflow: hidden;
-	border: 1px solid transparent;
 }
 
 .WorksThumb:hover {
 	background-image: none!important;
-	border: 1px solid #000;
 }
 
 .WorksThumb:hover span, .WorksThumb:active span {
