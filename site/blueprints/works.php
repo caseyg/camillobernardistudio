@@ -1,7 +1,8 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Works
-pages: true
+pages:
+  template: project
 files: false
 fields:
   title:
