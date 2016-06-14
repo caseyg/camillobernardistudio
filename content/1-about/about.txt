@@ -2,7 +2,7 @@ Title: About
 
 ----
 
-Text: 
+Text:
 
 Camillo Bernardi Studio is a post-production company based in Milan, Italy.
 
@@ -14,7 +14,7 @@ via Giacomo Watt 32
 20143 Milano, Italy
 +39 0236799022
 (link: mailto:info@camillobernardi.com text: info@camillobernardi.com)
-(link: http://instagram.com/camillobernardistudio text: Instagram)
+(link: http://instagram.com/camillobernardistudio text: Instagram popup: yes)
 (link: # text: Subscribe to Newsletter)
 
 © 2016 Copyright Camillo Bernardi Studio
