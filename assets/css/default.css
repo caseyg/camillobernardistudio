@@ -242,6 +242,7 @@ article a:link, article a:visited {
   width: 48.82117%;
   position: relative;
   width: 100%;
+  padding: 1.618em;
   position: absolute;
   top: -55%;
   left: 0;
