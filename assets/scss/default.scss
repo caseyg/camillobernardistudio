@@ -260,11 +260,14 @@ article a:link, article a:visited {
 .drawer>article, .drawer>div {
   display:block;
   overflow-y: scroll;
-  height: 100%;
+  height: 90%;
 }
 
-.drawer>article {
+.drawer>article, .drawer>div {
   width: 95vw;
+  padding-right: 5vw;
+  margin-left: 0;
+  padding-bottom: $gutter;
 }
 
 .drawer--open {

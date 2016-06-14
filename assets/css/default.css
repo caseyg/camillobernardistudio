@@ -284,10 +284,13 @@ article a:link, article a:visited {
 .drawer > article, .drawer > div {
   display: block;
   overflow-y: scroll;
-  height: 100%; }
+  height: 90%; }
 
-.drawer > article {
-  width: 95vw; }
+.drawer > article, .drawer > div {
+  width: 95vw;
+  padding-right: 5vw;
+  margin-left: 0;
+  padding-bottom: 1.618em; }
 
 .drawer--open {
   width: 100vw; }
