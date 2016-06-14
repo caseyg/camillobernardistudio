@@ -2,11 +2,11 @@ Title: About
 
 ----
 
-Text:
+Text: 
 
 Camillo Bernardi Studio is a post-production company based in Milan, Italy.
 
-We collaborate regularly with renowned photographers and agencies. Our work can be found on the (link: /tag:covers text: covers), (link: /tag:editorials text: editorials) and (link: /tag:campaigns text: campaigns) of fashion publications worldwide.
+We collaborate regularly with renowned photographers and agencies. Our work can be found on the (link: /tag:covers text: covers), (link: /tag:editorials text: editorials) of fashion publications and (link: /tag:campaigns text: campaigns) worldwide.
 
 We understand our clients’ needs and deliver results through technical expertise, precision and creativity.
 
