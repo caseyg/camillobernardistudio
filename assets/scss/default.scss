@@ -181,12 +181,6 @@ article {
     	line-height: 32pt;
     }
   }
-  @include media($large-viewport) {
-    &{
-      font-size: 36pt;
-    	line-height: 42pt;
-    }
-  }
 }
 
 article a:link, article a:visited {
