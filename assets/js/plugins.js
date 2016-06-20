@@ -23,33 +23,44 @@
 
 // Place any jQuery/helper plugins in here.
 
+function lazyload(){
+  $("img.lazy").lazyload();
+  var s = skrollr.init({forceHeight: false});if (s.isMobile()) {s.destroy();}
+}
+
+$(document).ready(function(){
+  lazyload();
+  var s = skrollr.init({forceHeight: false});if (s.isMobile()) {s.destroy();}
+});
+
 // SmoothState
 
-$(function(){
-  'use strict';
-  var $page = $('#skrollr-body'),
-      options = {
-        debug: true,
-        prefetch: true,
-        cacheLength: 4,
-        onStart: {
-          duration: 750, // Duration of our animation
-          render: function ($container) {
-            // Add your CSS animation reversing class
-            $container.addClass('is-exiting');
-            // Restart your animation
-            smoothState.restartCSSAnimations();
-          }
-        },
-        onReady: {
-          duration: 0,
-          render: function ($container, $newContent) {
-            // Remove your CSS animation reversing class
-            $container.removeClass('is-exiting');
-            // Inject the new content
-            $container.html($newContent);
-          }
+var $page = $('#skrollr-body'),
+    options = {
+      debug: true,
+      prefetch: true,
+      cacheLength: 4,
+      onStart: {
+        duration: 750, // Duration of our animation
+        render: function ($container) {
+          // Add your CSS animation reversing class
+          $container.addClass('is-exiting');
+          // Restart your animation
+          smoothState.restartCSSAnimations();
         }
       },
-      smoothState = $page.smoothState(options).data('smoothState');
-});
+      onReady: {
+        duration: 0,
+        render: function ($container, $newContent) {
+          // Remove your CSS animation reversing class
+          $container.removeClass('is-exiting');
+          // Inject the new content
+          $container.html($newContent);
+        }
+      },
+      onAfter: function () {
+        lazyload();
+      }
+    },
+
+    smoothState = $page.smoothState(options).data('smoothState');
