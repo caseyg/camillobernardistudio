@@ -23,13 +23,7 @@
 
 // Place any jQuery/helper plugins in here.
 
-function lazyload(){
-  $("img.lazy").lazyload();
-  var s = skrollr.init({forceHeight: false});if (s.isMobile()) {s.destroy();}
-}
-
 $(document).ready(function(){
-  lazyload();
   var s = skrollr.init({forceHeight: false});if (s.isMobile()) {s.destroy();}
 });
 

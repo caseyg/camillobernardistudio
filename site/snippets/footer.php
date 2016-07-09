@@ -3,7 +3,7 @@
 
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="/assets/js/jquery.smoothState.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lazysizes/2.0.0-rc2/lazysizes.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
         <script src="/assets/js/plugins.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
