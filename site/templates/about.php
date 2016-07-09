@@ -6,5 +6,5 @@
 <article>
 	<?php echo $page->text()->kt() ?>
 </article>
-<input type="button" value="&larr;" class="back" onclick="history.back(-1)" />
+<a class="back" href="/">&larr;</a>
 <?php snippet('footer') ?>

@@ -10,5 +10,5 @@
 			</a>
 		<?php endforeach ?>
 	</div>
-	<input type="button" value="&larr;" class="back" onclick="history.back(-1)" />
+	<a class="back" href="/">&larr;</a>
 <?php snippet('footer') ?>
