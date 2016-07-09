@@ -7,7 +7,7 @@
   <article>
     <h1 data-start="opacity:1;" data-200-start="opacity:0;"><?php echo $page->title() ?></h1>
   	<?php echo $page->text()->kt() ?>
-    <?php foreach($page->images() as $image): ?>
+    <?php foreach($page->images()->sortBy('Sort') as $image): ?>
       <figure>
         <img src="<?php echo $image->url() ?>">
       </figure>
