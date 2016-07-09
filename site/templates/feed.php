@@ -8,7 +8,7 @@
 		<article>
 			<h1><?php echo param('tag'); ?></h1>
 		</article>
-		<?php foreach($pages->find('/works')->children() as $subpage): ?>
+		<?php foreach($pages->find('/works')->children()->visible() as $subpage): ?>
 			<?php if($subpage->images()->filterBy('tags', param('tag'), ',')->count() > 0): ?>
 				<a href="<?php echo $subpage->url() ?>" class="work" id="<?php echo $subpage->slug() ?>">
 					<h2 data-anchor-target="#<?php echo $subpage->slug() ?>" data-top="opacity:0;" data--10p-top="opacity:1;" data--50p-top="opacity:1;" data--75p-top="opacity:0;"><?php echo html($subpage->title()) ?></h2>
