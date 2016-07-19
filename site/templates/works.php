@@ -1,14 +1,22 @@
 <?php snippet('header') ?>
-<header class="scene-nav scene-nav--gray scene-nav--fadegray">
-		<?php snippet('nav') ?>
-</header>
-<div class="drawer drawer--open scene-drawer">
-	<div>
-		<?php foreach($pages->find('/works')->children()->visible() as $subpage): ?>
-			<a class="WorksThumb" href="<?php echo $subpage->url() ?>" style="background-image:url('<?php echo $subpage->images()->sortBy('Sort')->first()->resize(400)->url() ?>');">
-				<span><?php echo $subpage->title() ?></span>
+
+<div class="page__drawer page__drawer--open">
+	<div class="container">
+		<?php foreach($pages->find('/works')->children()->visible() as $page): ?>
+			<a class="thumb" href="<?php echo $page->url() ?>" style="background-image:url('<?php echo $page->images()->sortBy('Sort')->first()->resize(400)->url() ?>');">
+				<div class="thumb__title">
+				  <?php if ($page->work()->isNotEmpty()): ?>
+				    <span class="title__work"><?php echo html($page->work()) ?></span>
+				  <?php endif; ?>
+				  <?php if ($page->client()->isNotEmpty()): ?>
+				    <span class="title__client"><?php echo html($page->client()) ?></span>
+				  <?php endif; ?>
+				</div>
 			</a>
 		<?php endforeach ?>
 	</div>
-	<a class="back" href="/">&larr;</a>
+</div>
+<a class="back" href="/">&larr;</a>
+<div class="page__content"></div>
+
 <?php snippet('footer') ?>
