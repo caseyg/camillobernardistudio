@@ -121,10 +121,10 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
     display: table; }
   @media screen and (min-width: 480px) and (max-width: 768px) {
     .container {
-      padding: 0 1.618em; } }
+      padding: 0 1.618em 5em; } }
   @media screen and (min-width: 769px) {
     .container {
-      padding: 0 1.618em; } }
+      padding: 0 1.618em 5em; } }
 
 @media screen and (min-width: 769px) {
   .container--about {

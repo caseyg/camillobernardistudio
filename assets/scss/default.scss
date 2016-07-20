@@ -132,11 +132,11 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
   display: block;
 
   @include media($medium-viewport) {
-    @include pad(0 $gutter);
+    @include pad(0 $gutter 5em);
   }
 
   @include media($large-viewport) {
-    @include pad(0 $gutter);
+    @include pad(0 $gutter 5em);
   }
 }
 
