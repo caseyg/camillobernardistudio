@@ -354,6 +354,9 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
     .page__drawer--open {
       padding-right: 40px; } }
 
+.back {
+  display: none; }
+
 @media screen and (min-width: 769px) {
   .back {
     display: block;

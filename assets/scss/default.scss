@@ -347,6 +347,10 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
   }
 }
 
+.back {
+  display: none;
+}
+
 @include media($large-viewport) {
   .back {
     display: block;
