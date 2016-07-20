@@ -230,15 +230,11 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
   display: block;
 }
 
-.title__work,
-.title__client,
-.title__optional {
+.title__work p,
+.title__client p,
+.title__optional p {
+  display: block;
   padding: 0 $gutter;
-}
-
-.title__work,
-.title__client {
-  margin-bottom: 1em;
 }
 
 .title__optional p {
