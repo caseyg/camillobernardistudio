@@ -113,7 +113,7 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
   border-bottom: 2px solid black; }
 
 .container {
-  padding: 0 0.809em;
+  padding: 0 0.809em 5em;
   display: block; }
   .container::after {
     clear: both;
@@ -207,6 +207,11 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
 
 .header__link {
   display: block; }
+
+.title__work,
+.title__client,
+.title__optional {
+  padding: 0 1.618em; }
 
 .title__work,
 .title__client {
@@ -342,6 +347,7 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
   width: 0vw;
   height: 100vh;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   -webkit-transition: 0.4s slide ease-in-out;
   transition: 0.4s slide ease-in-out; }
 

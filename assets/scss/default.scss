@@ -128,7 +128,7 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
 
 .container {
   @include clearfix;
-  @include pad(0 $gutter/2);
+  @include pad(0 $gutter/2 5em);
   display: block;
 
   @include media($medium-viewport) {
@@ -228,6 +228,12 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
 
 .header__link {
   display: block;
+}
+
+.title__work,
+.title__client,
+.title__optional {
+  padding: 0 $gutter;
 }
 
 .title__work,
@@ -332,6 +338,7 @@ nav ul li a:hover span, a:active span, nav ul li a.active span {
   width: 0vw;
   height: 100vh;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   -webkit-transition: 0.4s slide ease-in-out;
           transition: 0.4s slide ease-in-out;
 }

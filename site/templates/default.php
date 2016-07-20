@@ -4,7 +4,7 @@
 <div class="page__content">
   <div class="container">
 		<div class="work" id="<?php echo $page->slug() ?>">
-			<h2 class="work__header">
+			<div class="work__header">
         <div class="title">
           <?php if ($page->work()->isNotEmpty()): ?>
             <span class="title__work"><?php echo $page->work()->kt() ?></span>
@@ -18,7 +18,7 @@
             <span class="title__optional"><?php echo $page->optional()->kt() ?></span>
           <?php endif; ?>
         </div>
-      </h2>
+      </div>
 			<?php foreach($page->images()->sortBy('Sort') as $image): ?>
 				<div class="image-container" style="max-width:<?php echo $image->width() ?>px;">
 					<figure class="ratio-box" style="padding-bottom:<?php echo $image->height()/$image->width()*100 ?>%">
