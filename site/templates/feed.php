@@ -4,25 +4,30 @@
 <div class="page__content">
 	<div class="container">
 		<?php if (param('tag')): ?>
-			<h1><?php echo param('tag'); ?></h1>
+
 			<?php foreach($pages->find('/works')->children()->visible() as $page): ?>
 				<?php if($page->images()->filterBy('tags', param('tag'), ',')->count() > 0): ?>
-					<a href="<?php echo $page->url() ?>" class="work" id="<?php echo $page->slug() ?>">
-						<h2 data-anchor-target="#<?php echo $page->slug() ?>" data-top="opacity:0;" data--10p-top="opacity:1;" data--50p-top="opacity:1;" data--75p-top="opacity:0;"><?php echo html($page->title(), array('page' => $page)) ?></h2>
-						<?php foreach($page->images()->filterBy('tags', param('tag'), ',') as $image): ?>
-							<figure>
-								<img class="lazyload"
-									data-src="<?php echo $image->width(480)->url() ?>"
-									data-srcset="<?php echo $image->width(480)->url() ?> 480w,
-										<?php echo $image->width(768)->url() ?> 768w,
-										<?php echo $image->url() ?> 1200w"
-									width="<?php echo $image->width() ?>"
-									height="<?php echo $image->height() ?>">
-							</figure>
-						<?php endforeach ?>
-					</a>
+					<article class="work" id="<?php echo $page->slug() ?>">
+						<a href="<?php echo $page->url() ?>" class="work" id="<?php echo $page->slug() ?>">
+							<?php foreach($page->images()->filterBy('tags', param('tag'), ',') as $image): ?>
+								<div class="image-container" style="max-width:<?php echo $image->width() ?>px;">
+									<figure class="ratio-box" style="padding-bottom:<?php echo $image->height()/$image->width()*100 ?>%">
+										<img
+											class="lazyload"
+											data-src="<?php echo $image->width(480)->url() ?>"
+											data-srcset="<?php echo $image->width(480)->url() ?> 480w,
+				                <?php echo $image->width(768)->url() ?> 768w,
+				                <?php echo $image->url() ?> 1200w"
+											width="<?php echo $image->width() ?>"
+											height="<?php echo $image->height() ?>">
+									</figure>
+								</div>
+							<?php endforeach ?>
+						</a>
+					</article>
 				<?php endif ?>
 			<?php endforeach ?>
+
 		<?php else: ?>
 			<?php $works = $pages->find('/works')->children()->paginate(5) ?>
 
