@@ -3,6 +3,8 @@
 title: Works
 pages:
   template: project
+  sort: flip
+  limit: 100
 files: false
 fields:
   title:
